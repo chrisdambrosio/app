@@ -18,6 +18,8 @@ defmodule AppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/webhook", WebhookController, :index
+    get "/webhook/:request", WebhookController, :show
   end
 
   # Other scopes may use custom stacks.
